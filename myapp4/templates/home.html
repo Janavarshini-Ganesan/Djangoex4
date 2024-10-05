@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5b375; /* Light Peach */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff; /* White */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 600px;
+        }
+
+        h1,h2,h3 {
+            color: #5c3a2e; /* Dark Brown */
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            background-color: #f9c38e; /* Peach */
+            color: rgb(10, 7, 7);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #ffb366; /* Darker Peach */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kamaraj College of Engineering and Technology</h1>
+        <h2>Web Applications using Django Framework</h2>
+        <p>Janavarshini G, B.TECH IT-B</p>
+        <h3>Configuration and Sending E-mail using Django Framework</h3>
+        <form method="post" action="{% url 'send_email' %}">
+            {% csrf_token %}
+            <button type="submit" class="button">Send Email</button>
+        </form>
+    </div>
+</body>
+</html>
